@@ -76,12 +76,6 @@ document.getElementById("addExamForm").addEventListener("submit", function (even
 
     // Kiểm tra xem các trường thông tin có được điền đầy đủ hay không
     if (examName && examType && examStatus && examDescription) {
-        // Gửi dữ liệu đến server hoặc xử lý dữ liệu theo nhu cầu của bạn
-        console.log("Tên kỳ thi:", examName);
-        console.log("Loại kỳ thi:", examType);
-        console.log("Trạng thái:", examStatus);
-        console.log("Mô tả:", examDescription);
-
         // Reset form sau khi submit thành công (tuỳ theo nhu cầu)
         this.reset();
         alert("Thêm thành công");
@@ -97,23 +91,17 @@ document.getElementById("updateExamForm").addEventListener("submit", function (e
     event.preventDefault();
 
     // Lấy giá trị từ các trường thông tin
-    var examName = document.getElementById("examName").value;
-    var examType = document.getElementById("examType").value;
-    var examStatus = document.getElementById("examStatus").value;
-    var examDescription = document.getElementById("examDescription").value;
+    var examName = document.getElementById("NameUp").value;
+    var examType = document.getElementById("TypeUp").value;
+    var examStatus = document.getElementById("StatusUp").value;
+    var examDescription = document.getElementById("DescriptionUp").value;
 
     // Kiểm tra xem các trường thông tin có được điền đầy đủ hay không
     if (examName && examType && examStatus && examDescription) {
-        // Gửi dữ liệu đến server hoặc xử lý dữ liệu theo nhu cầu của bạn
-        console.log("Tên kỳ thi:", examName);
-        console.log("Loại kỳ thi:", examType);
-        console.log("Trạng thái:", examStatus);
-        console.log("Mô tả:", examDescription);
-
         // Reset form sau khi submit thành công (tuỳ theo nhu cầu)
         this.reset();
-        alert("Thêm thành công");
-        var formContainer = document.getElementById("addExamModal");
+        alert("Cập nhật thành công");
+        var formContainer = document.getElementById("updateExamForm");
         formContainer.style.display = "none";
     } else {
         alert("Vui lòng điền đầy đủ thông tin");
