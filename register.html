@@ -8,37 +8,41 @@
 </head>
 <body> 
     <section>   
-        <form id="form-register">
+        <form id="form-register" onsubmit="register()">
             <h1>Đăng ký</h1> 
             <div class="inputbox">
                 <ion-icon name="ios-person-outline"></ion-icon>
-                <input type="text" required>
+                <input id="username" type="text" required>
                 <label for="loginUser">Tên đăng nhập</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="ios-person-outline"></ion-icon>
-                <input type="text" required>
+                <input id="email" type="text" required>
                 <label for="email">Email</label>
             </div>
             
             <div class="inputbox date">
                 <ion-icon name="ios-person-outline"></ion-icon>
-                <input type="date" required  >
+                <input id="date" type="date" required  >
                 <label for="date">Ngày sinh</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" required>
+                <input id="password" type="password" required>
                 <label for="loginPass">Mật khẩu</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" required>
+                <input id="repeatpass" type="password" required>
                 <label for="loginPass">Nhắc lại mật khẩu</label>
             </div> 
             <input type="submit" value="Đăng ký" id="submit"> 
             </div>
+            <div class="register">
+                <p> <a href="index.html">Đăng nhập</a></p>
+            </div>
         </form>
     </section>
+    <script src="script/login.js"></script>
 </body>
 </html>
