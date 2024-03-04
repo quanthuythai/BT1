@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tạo Bài Kiểm Tra</title>
-    <link rel="stylesheet" href="style/create.css">
-</head>
-<body>
-    <a href="">Trang chủ</a>
+    <link rel="stylesheet" href="style/create.css" />
+  </head>
+  <body>
     <div id="container">
-        <h1>Tạo Bài Kiểm Tra Trắc Nghiệm</h1>
+      <h1 style="text-align: center">Tạo bài kiểm tra trắc nghiệm</h1>
 
-        <label for="tenBaiThi">Tên Bài Thi:</label>
-        <input type="text" id="tenBaiThi" placeholder="Nhập tên bài thi...">
+      <label for="tenBaiThi">Tên Bài Thi:</label> <br>
+      <input type="text" id="tenBaiThi" placeholder="Nhập tên bài thi..." />
 
-        <label for="thoiGian">Thời Gian Thi:</label>
-        <select id="thoiGian" onchange="hienThiThoiGian()">
-            <option value="tuDo">Tự Do</option>
-            <option value="gioiHan">Giới Hạn</option>
-        </select>
+      <br> <label for="thoiGian">Thời gian thi:</label>  <br>
+      <select id="thoiGian" onchange="hienThiThoiGian()">
+        <option value="tuDo">Tự do</option>
+        <option value="gioiHan">Giới hạn</option>
+      </select>
 
-        <div id="thoiGianGioiHan" style="display:none;">
-            <label for="thoiGianBatDau">Thời Gian Bắt Đầu:</label>
-            <input type="datetime-local" id="thoiGianBatDau">
+      <br><div id="thoiGianGioiHan" style="display: none">
+        <label for="thoiGianBatDau">Thời gian bắt đầu:</label> <br>
+        <input type="datetime-local" id="thoiGianBatDau" />
 
-            <label for="thoiGianKetThuc">Thời Gian Kết Thúc:</label>
-            <input type="datetime-local" id="thoiGianKetThuc">
-        </div>
+      <br>  <label for="thoiGianKetThuc">Thời gian kết thúc:</label> <br>
+        <input type="datetime-local" id="thoiGianKetThuc" />
+      </div>
 
-        <label for="soCauHoi">Số Câu Hỏi:</label>
-        <input type="number" id="soCauHoi" min="1" placeholder="Nhập số câu hỏi...">
+      <br><label for="soCauHoi">Số câu hỏi:</label> <br>
+      <input
+        type="number"
+        id="soCauHoi"
+        min="1"
+        placeholder="Nhập số câu hỏi..."
+      />
 
-        <label for="tongDiem">Tổng Điểm:</label>
-        <input type="number" id="tongDiem" min="1" placeholder="Nhập tổng điểm...">
+      <br> <label for="tongDiem">Tổng điểm:</label> <br>
+      <input
+        type="number"
+        id="tongDiem"
+        min="1"
+        placeholder="Nhập tổng điểm..."
+      />
 
-        <div id="cauHoiContainer"></div>
+      <button onclick="luuThongTin()">Lưu thông tin</button>
 
-        <button id="luu" onclick="luuThongTin()">Lưu Thông Tin</button>
+      <div id="cauHoiContainer"></div>
     </div>
 
     <script src="create.js"></script>
-</body>
+  </body>
 </html>
