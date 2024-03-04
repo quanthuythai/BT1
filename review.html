@@ -10,27 +10,6 @@
     <main>
         <div class="main-content">
             <div class="title">Bài thực hành FrontEnd</div>
-            <script> 
-                var intervalId;
-                var secondsRemaining = 3600;  
-                window.onload = function() {
-                    function updateCountdown() {
-                        var minutes = Math.floor(secondsRemaining / 60);
-                        var seconds = secondsRemaining % 60;
-                        document.getElementById("countdown").innerText = "Thời gian còn lại: " + minutes + " phút " + seconds + " giây";
-                        secondsRemaining--;
-                        if (secondsRemaining < 0) {
-                            clearInterval(intervalId);
-                            document.getElementById("countdown").innerText = "Hết giờ!";
-                            alert("Đã hết giờ làm bài, yêu cầu thí sinh nộp bài");
-                            window.location.href = "outcome.html";
-                        }
-                    } 
-                    updateCountdown();
-                    var intervalId = setInterval(updateCountdown, 1000);
-                };
-            </script>
-            <div id="countdown">Thời gian còn lại: 60 phút 00 giây</div>
             <div class="question">
                 <h3>PHẦN I: CÂU HỎI LỰA CHỌN ĐÚNG/SAI</h3>
                 <p>Thí sinh chỉ chọn vào 1 trong 2 phương án: Đúng hoặc sai</p>
@@ -290,23 +269,14 @@
                 <p>Nội dung...</p>
                 <textarea name="essayAnswer10" rows="6" cols="75" onclick="done()"></textarea>
             </div>
-            <button class="submit-btn" onclick="handleSubmit()">Nộp bài</button>
-            <script>
-                var completedCount = 0;   
-                function handleSubmit() {
-                    var confirmation = confirm("Bạn có chắc chắn muốn nộp bài?");
-                    if (confirmation) {
-                        clearInterval(intervalId);  
-                        alert("Nộp bài thành công"); 
-                        localStorage.setItem('completedCount', completedCount); 
-                        window.location.href = "outcome.html";
-                    }
-                } 
-                function done() {
-                    completedCount++;  
-                }
-            </script>
+            <button class="thoat-btn" onclick="xemKetQua()">Thoát</button>
         </div>
     </main>
+
+    <script>
+        function xemKetQua() {
+            window.location.href="outcome.html";
+        }
+    </script>
 </body>
 </html>
