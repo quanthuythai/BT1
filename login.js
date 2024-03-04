@@ -1,4 +1,4 @@
-document.getElementById("form_login").addEventListener("submit", function(event) {
+document.getElementById("form-login").addEventListener("submit", function(event) {
     event.preventDefault(); 
     var loginUser = document.getElementById("loginUser").value;
     var loginPass = document.getElementById("loginPass").value;
@@ -18,4 +18,7 @@ function showError(errorMessage) {
     errorElement.classList.add("error");
     errorElement.textContent = errorMessage;
     document.body.appendChild(errorElement);
+}
+function handleSubmit() {
+    window.location.href= "home.html";
 }
