@@ -1,3 +1,6 @@
+function xemLai() {
+    window.location.href = "review.html";
+}
 var ketQua = document.getElementById('ketQua');
 // var soCauHoi = document.getElementById('soCauHoi').value;
 var hienThi = document.createElement('div');
